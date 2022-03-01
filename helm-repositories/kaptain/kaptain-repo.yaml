@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: kaptain-helm-repo
+  namespace: kommander-flux
+spec:
+  url: "https://kaptain.s3.us-west-2.amazonaws.com/charts"
+  interval: 10m
+  timeout: 1m
