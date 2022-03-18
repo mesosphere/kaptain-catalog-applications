@@ -21,6 +21,9 @@ spec:
     remediation:
       retries: 30
   releaseName: kaptain
+  value:
+    global:
+      workspace: ${releaseNamespace}
   valuesFrom:
     - kind: ConfigMap
       name: kaptain-2.0.0-defaults
