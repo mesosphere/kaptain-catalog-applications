@@ -6,4 +6,3 @@ metadata:
   namespace: ${releaseNamespace}
 data:
   values.yaml: |
-    data: value
