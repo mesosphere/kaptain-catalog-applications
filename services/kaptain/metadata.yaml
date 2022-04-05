@@ -1,7 +1,7 @@
 displayName: Kaptain
 description: Enterprise-grade ML/AI platform built on pure upstream KubeFlow
 category:
-  - AI/ML
+  - aiml
 type: catalog
 scope:
   - workspace
