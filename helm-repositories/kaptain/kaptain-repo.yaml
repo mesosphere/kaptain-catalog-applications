@@ -5,6 +5,6 @@ metadata:
   name: kaptain-helm-repo
   namespace: kommander-flux
 spec:
-  url: "https://mesosphere.github.io/kaptain-charts"
+  url: "http://kaptain-helm-mirror.kommander.svc"
   interval: 10m
   timeout: 1m
