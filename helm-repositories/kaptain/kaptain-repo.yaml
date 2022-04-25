@@ -4,7 +4,10 @@ kind: HelmRepository
 metadata:
   name: kaptain-helm-repo
   namespace: kommander-flux
+  labels:
+    kommander.d2iq.io/dkp-airgapped: supported
 spec:
-  url: "http://kaptain-helm-mirror.kommander.svc"
+  url: "${helmMirrorURL:=http://kaptain-helm-mirror.kommander.svc}"
   interval: 10m
   timeout: 1m
+  
