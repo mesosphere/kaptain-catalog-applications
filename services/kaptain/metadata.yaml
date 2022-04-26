@@ -7,20 +7,18 @@ scope:
   - workspace
 overview: |-
   # Overview
-  The ML/AI add-on is an enterprise end-to-end machine learning platform that provides a notebooks-first approach for data scientists. It runs on top of DKP, D2iQ’s enterprise Kubernetes platform, bringing models from prototype to production faster. It comes with an independent SDK, is a Python API that abstracts away underlying Kubernetes details, allowing data scientists to focus on building, tuning, and deploying models. The Jupyter Notebooks that data scientists use are pre-installed with many top libraries such as SciPy and Keras, and with frameworks such as PyTorch and Tensorflow. The DKP ML/AI add-on has out-of-the-box GPU support, and is certified on Nvidia’s DGX platform and can be deployed in HPC (high performance computing) clusters.
-
+  The Kaptain AI/ML Add-on is an enterprise machine learning platform that runs as a DKP catalog application. Kaptain packages KubeFlow for day 2 operations and provides a notebooks-first approach for data scientists. It runs on DKP, EKS, and AKS, has out-of-the-box GPU support, and is certified on Nvidia’s DGX platform.
   ## Key Features
+  
   ### SDK
-  The Kaptain SDK is a Python API that abstracts away underlying Kubernetes details, allowing data scientists to focus on building, tuning, and deploying models. The Jupyter Notebooks that data scientists use are pre-installed with many top libraries such as SciPy and Keras, and with frameworks such as PyTorch and Tensorflow. The SDK is released independently of Kaptain.
+  
+  The Kaptain SDK is a Python API that abstracts away underlying Kubernetes details and is pre-installed with libraries such as SciPy and Keras, and with frameworks such as PyTorch and Tensorflow.
+
+  ### UI Monitoring
+  The Kaptain UI displays the resource consumption of notebooks, jobs, experiments, and deployments in a single dashboard. Additionally, Kaptain is integrated with TensorBoard to visually track training progress, analyze fairness and feature importance, and debug issues with architecture.
 
   ### Multi-tenancy
-  Kaptain is built for security, scale, and speed. Kaptain supports multi-tenancy with fine-grained role-based access control (RBAC), as well as authentication, authorization, and end-to-end encryption with Dex and single sign-on with Istio. Administrators can manage access across namespaces and configure access to data volumes that users can mount directly in their notebooks.
-
-  ### Resource Monitoring
-  The Kaptain UI displays the resource consumption of notebooks, jobs, experiments, and deployments in a single dashboard so data scientists can monitor their resource usage.
-
-  ### Training Progress
-  Additionally, Kaptain is integrated with TensorBoard to visually track model training progress, analyze model fairness and feature importance, and debug issues with architecture or code in individual nodes."
+  Kaptain supports multi-tenancy with fine-grained role-based access control (RBAC) for configuring user access to volumes, as well as authentication with Dex and single sign-on with Istio.
 
   ### More information
   - [Kaptain Documentation](https://d2iq.com/products/kaptain)
