@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kaptain-2.1.0-dev-defaults
+  namespace: ${releaseNamespace}
+data:
+  values.yaml: ""
