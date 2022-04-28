@@ -23,4 +23,4 @@ spec:
   releaseName: kaptain
   valuesFrom:
     - kind: ConfigMap
-      name: kaptain-2.1.0-dev-defaults
+      name: kaptain-2.1.0-defaults
