@@ -10,5 +10,3 @@ spec:
   url: "${helmMirrorURL:=http://kaptain-helm-mirror.kommander.svc}"
   interval: 10m
   timeout: 1m
-  upgrade:
-    crds: CreateReplace
