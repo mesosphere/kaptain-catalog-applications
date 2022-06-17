@@ -17,10 +17,13 @@ spec:
   install:
     remediation:
       retries: 30
+    crds: CreateReplace
   upgrade:
     remediation:
       retries: 30
+    crds: CreateReplace
   releaseName: kaptain
   valuesFrom:
     - kind: ConfigMap
       name: kaptain-2.0.0-defaults
+  
