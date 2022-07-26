@@ -3,6 +3,7 @@ description: Enterprise-grade ML/AI platform built on pure upstream KubeFlow
 category:
   - aiml
 type: catalog
+allowMultipleInstances: false
 scope:
   - workspace
 overview: |-
