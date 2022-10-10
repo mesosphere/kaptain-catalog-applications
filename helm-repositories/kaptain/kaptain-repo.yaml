@@ -7,6 +7,6 @@ metadata:
   labels:
     kommander.d2iq.io/dkp-airgapped: supported
 spec:
-  url: "${helmMirrorURL:=http://kaptain-helm-mirror.kaptain-2-l9wvw-gq8lr.svc}"
+  url: "${helmMirrorURL:=http://kaptain-helm-mirror.kaptain-3-k6rvl-pnbzc.svc}"
   interval: 10m
   timeout: 1m
