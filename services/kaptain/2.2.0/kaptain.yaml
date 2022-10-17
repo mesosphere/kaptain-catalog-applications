@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: kaptain-helm-repo
         namespace: kommander-flux
-      version: 2.2.0-dev
+      version: 2.2.0-beta.1
   interval: 15s
   timeout: 20m
   install:
