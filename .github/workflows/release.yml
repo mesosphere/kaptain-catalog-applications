@@ -23,8 +23,13 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Create tarball
+        run: |
+          tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root .
+
+
       - name: Create GH release
         uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
-          artifacts: ${{ env.artifact_path }}
+          artifacts: kaptain-catalog-applications.tar.gz
