@@ -1,0 +1,30 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs: {}
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish-chart:
+    name: Release new Kaptain-Catalog-Applications version
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Create GH release
+        uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          artifacts: ${{ env.artifact_path }}
