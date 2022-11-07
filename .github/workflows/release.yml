@@ -27,7 +27,6 @@ jobs:
         run: |
           tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root .
 
-
       - name: Create GH release
         uses: ncipollo/release-action@v1
         with:
