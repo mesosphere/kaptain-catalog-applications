@@ -25,8 +25,7 @@ jobs:
 
       - name: Create tarball
         run: |
-          tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root --exclude={README.md,Makefile} .
-
+          tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root helm-repositories/ services/ .
 
       - name: Create GH release
         uses: ncipollo/release-action@v1
