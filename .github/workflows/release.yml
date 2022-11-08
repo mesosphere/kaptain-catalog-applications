@@ -43,4 +43,4 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
-          artifacts: kaptain-catalog-applications.tar.gz
+          artifacts: ../kaptain-catalog-applications.tar.gz
