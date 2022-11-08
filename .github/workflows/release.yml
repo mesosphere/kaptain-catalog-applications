@@ -9,8 +9,19 @@ jobs:
   publish-chart:
     name: Release new Kaptain-Catalog-Applications version
     permissions:
-      contents: read
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      discussions: write
       id-token: write
+      issues: write
+      packages: write
+      pages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
     runs-on: self-hosted
     steps:
       - name: Checkout code
