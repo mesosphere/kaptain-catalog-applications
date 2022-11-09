@@ -1,0 +1,46 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs: {}
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish-chart:
+    name: Release new Kaptain-Catalog-Applications version
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      discussions: write
+      id-token: write
+      issues: write
+      packages: write
+      pages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Create tarball
+        run: |
+          cd ../
+          tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root --exclude={README.md,Makefile,.*} kaptain-catalog-applications/
+
+      - name: Create GH release
+        uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          artifacts: ../kaptain-catalog-applications.tar.gz
