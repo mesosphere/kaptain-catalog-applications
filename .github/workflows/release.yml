@@ -39,6 +39,7 @@ jobs:
           cd ../
           tar -zcf kaptain-catalog-applications.tar.gz --owner root --group root --exclude={README.md,Makefile,.git,.DS_Store,.github} kaptain-catalog-applications/
 
+
       - name: Create GH release
         uses: ncipollo/release-action@v1
         with:
