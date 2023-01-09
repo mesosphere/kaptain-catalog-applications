@@ -22,7 +22,9 @@ jobs:
       repository-projects: write
       security-events: write
       statuses: write
-    runs-on: self-hosted
+    runs-on: 
+    - self-hosted
+    - small
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
